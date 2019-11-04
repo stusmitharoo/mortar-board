@@ -1,6 +1,7 @@
 'use strict'
 
-import { app, BrowserWindow } from 'electron'
+import { app, BrowserWindow, Menu } from 'electron'
+import mainMenuTemplate from './mainMenuTemplate'
 
 /**
  * Set `__static` path to static files in production
@@ -14,6 +15,10 @@ let mainWindow
 const winURL = process.env.NODE_ENV === 'development'
   ? `http://localhost:9080`
   : `file://${__dirname}/index.html`
+
+const mainMenu = Menu.buildFromTemplate(mainMenuTemplate)
+
+Menu.setApplicationMenu(mainMenu)
 
 function createWindow() {
   /**
