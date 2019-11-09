@@ -1,0 +1,24 @@
+#wrapper {
+  background: radial-gradient(
+    ellipse at top right,
+    rgba(255, 255, 255, 1) 40%,
+    rgba(229, 229, 229, 0.9) 100%
+  );
+  height: 100vh;
+  padding: 20px 80px;
+  width: 100%;
+}
+
+.button {
+  &.is-large {
+    width: 300px;
+  }
+  &.is-small {
+    width: 80px;
+  }
+}
+
+nav {
+  padding: 20px 80px;
+  margin-bottom: 0px;
+}
