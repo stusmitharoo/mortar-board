@@ -28,9 +28,10 @@ export default {
 <style lang="scss" scoped>
 aside {
   width: 80px;
+  height: calc(100vh - 120px);
   padding: 0 80px;
   float: left;
-  margin-right: 20px;
+  margin-right: 40px;
 }
 button {
   margin: 5px 0px;

@@ -13,6 +13,9 @@
   &.is-large {
     width: 300px;
   }
+  &.is-medium {
+    width: 150px;
+  }
   &.is-small {
     width: 80px;
   }
@@ -21,4 +24,10 @@
 nav {
   padding: 20px 80px;
   margin-bottom: 0px;
+}
+
+.input {
+  &.number {
+    width: 80px;
+  }
 }

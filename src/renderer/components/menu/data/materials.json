@@ -6,13 +6,5 @@
   {
     "name": "Create",
     "link": "/materials/create"
-  },
-  {
-    "name": "Edit",
-    "link": "/materials/edit"
-  },
-  {
-    "name": "Delete",
-    "link": "/materials/delete"
   }
 ]

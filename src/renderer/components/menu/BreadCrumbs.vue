@@ -18,6 +18,11 @@ export default {
   },
   created() {
     this.crumbs = this.$route.path.split('/').splice('1')
+  },
+  watch: {
+    $route() {
+      this.crumbs = this.$route.path.split('/').splice('1')
+    }
   }
 }
 </script>

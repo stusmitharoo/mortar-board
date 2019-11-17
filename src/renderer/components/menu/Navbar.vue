@@ -26,7 +26,7 @@
         <a>Users</a>
       </p>
       <p class="level-item">
-        <a class="button is-success" @click="logout()">Log out</a>
+        <button class="button is-success" @click="logout()">Log out</button>
       </p>
     </div>
   </nav>
