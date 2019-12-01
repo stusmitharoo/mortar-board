@@ -1,31 +1,37 @@
 const state = {
   layers: [],
-  fields: []
+  fields: [],
+  items: []
 }
 
 const mutations = {
   setLayers(state, payload) {
-    console.log('mute', payload)
     state.layers = payload
   },
   setFields(state, payload) {
-    console.log('mute', payload)
     state.fields = payload
+  },
+  setMaterialItem(state, payload) {
+    state.items.push(payload)
   }
 }
 
 const actions = {
   addLayers({ commit }, payload) {
-    console.log('action', payload)
     commit('setLayers', payload)
   },
   addFields({ commit }, payload) {
-    console.log('action', payload)
     commit('setFields', payload)
+  },
+  addMaterialItem({ commit }, payload) {
+    commit('setMaterialItem', payload)
   }
 }
 
 const getters = {
+  getFields: state => {
+    return state.fields
+  }
 }
 
 export default {

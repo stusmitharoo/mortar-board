@@ -54,7 +54,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.pt-40 {
-  padding-top: 40px;
-}
 </style>

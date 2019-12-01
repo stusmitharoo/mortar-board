@@ -1,32 +1,49 @@
 <template>
-  <div>
-    <material-input/>
+  <main>
+    <material-input
+      @materialInfoToParent="materialInfoToParent"
+      @layerInfoToParent="layerInfoToParent"
+    />
     <div class="level pt-40">
       <div class="level-item">
-        <button class="button is-medium is-info level-item" @click="addSetup">Add Item</button>
+        <button class="button is-medium is-info level-item" @click="addMaterial">Add Item</button>
       </div>
     </div>
-  </div>
+  </main>
 </template>
 
 <script>
 import MaterialInput from './components/MaterialInput.vue'
+import { mapActions } from 'vuex'
 export default {
-  name: 'setup',
+  name: 'create',
   components: {
     MaterialInput
   },
   data() {
     return {
+      materialItemInfo: [],
+      layerInfo: []
     }
   },
   methods: {
+    ...mapActions([
+      'addMaterialItem'
+    ]),
+    addMaterial() {
+      this.materialItemInfo.push(this.layerInfo)
+      // this.addMaterialItem(this.materialItemInfo)
+      // this.materialItemInfo = []
+    },
+    materialInfoToParent(items) {
+      this.materialItemInfo = items
+    },
+    layerInfoToParent(items) {
+      this.layerInfo = items
+    }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-.pt-40 {
-  padding-top: 40px;
-}
 </style>

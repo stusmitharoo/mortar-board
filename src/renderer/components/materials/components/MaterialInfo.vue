@@ -58,7 +58,4 @@ export default {
   padding: 10px 0px;
   width: 340px;
 }
-.pt-40 {
-  padding-top: 40px;
-}
 </style>
